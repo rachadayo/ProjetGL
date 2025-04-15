@@ -13,7 +13,8 @@ public class Controler {
 	@FXML private Button btn6;
 	@FXML private Button btn7;
 	@FXML private Button btn8;
-	@FXML private Button btn9;
+	
+	
 	
 	
 }
