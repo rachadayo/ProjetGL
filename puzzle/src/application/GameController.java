@@ -21,14 +21,11 @@ public class GameController {
 
 	@FXML
 	private Button Home;
-
-	@FXML
-	private void handleHomeButton() throws IOException {
-		Parent startRoot = FXMLLoader.load(getClass().getResource("start.fxml"));
-
-		Stage stage = (Stage) Home.getScene().getWindow();
-
-		stage.setScene(new Scene(startRoot, 600, 600));
-	}
+	 @FXML
+	    private void handleHomeButton(ActionEvent event) throws IOException {
+	        Parent root = FXMLLoader.load(getClass().getResource("/application/start.fxml"));
+	        Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+	        stage.setScene(new Scene(root));
+	    }
 
 }
