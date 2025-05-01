@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 import javafx.animation.TranslateTransition;
 import javafx.util.Duration;
 
+
 import java.io.IOException;
 
 import javafx.animation.*;
@@ -21,11 +22,16 @@ public class GameController {
 
 	@FXML
 	private Button Home;
+	
 	 @FXML
 	    private void handleHomeButton(ActionEvent event) throws IOException {
 	        Parent root = FXMLLoader.load(getClass().getResource("/application/start.fxml"));
 	        Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
 	        stage.setScene(new Scene(root));
 	    }
+
+	
+
+	
 
 }
