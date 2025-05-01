@@ -22,3 +22,6 @@ AnchorPane {
 .Home{
 	-fx-font-size:17px;
 }
+button20, #button20:hover, #button20:active {
+    -fx-background-color: transparent !important; 
+}

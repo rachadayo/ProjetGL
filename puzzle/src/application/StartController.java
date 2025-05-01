@@ -16,11 +16,9 @@ public class StartController {
 
 	@FXML
 	private void handleStartButton(ActionEvent event) throws IOException {
-		Parent gameRoot = FXMLLoader.load(getClass().getResource("grid.fxml"));
-		Stage stage = (Stage) startButton.getScene().getWindow();
-		stage.setScene(new Scene(gameRoot));
-		Scene scene = new Scene(gameRoot, 600, 600);
-		stage.setResizable(false);
-		stage.show();
-	}
-}
+	    Parent gameRoot = FXMLLoader.load(getClass().getResource("grid.fxml"));
+	    Stage stage = (Stage) startButton.getScene().getWindow();
+	    
+	    stage.setScene(new Scene(gameRoot, 600, 600));
+	    stage.show();
+	}}

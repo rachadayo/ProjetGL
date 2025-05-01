@@ -24,47 +24,47 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button id="btn00" mnemonicParsing="false" prefHeight="102.0" prefWidth="117.0" style="-fx-background-color: white; -fx-background-radius: 5px;" stylesheets="@application.css" text="1" textFill="#880e4f">
+            <Button fx:id="btn00" mnemonicParsing="false" prefHeight="102.0" prefWidth="117.0" style="-fx-background-color: white; -fx-background-radius: 5px;" stylesheets="@application.css" text="1" textFill="#880e4f" GridPane.columnIndex="0" GridPane.rowIndex="0">
                <font>
                   <Font name="System Bold" size="50.0" />
                </font>
             </Button>
-            <Button id="btn21" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="110.0" prefWidth="126.0" style="-fx-background-color: white;" text="6" textFill="#880e4f" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Button fx:id="btn21" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="110.0" prefWidth="126.0" style="-fx-background-color: white;" text="6" textFill="#880e4f" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
                   <Font name="System Bold" size="50.0" />
                </font>
             </Button>
-            <Button id="btn12" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="109.0" prefWidth="118.0" style="-fx-background-color: white;" text="7" textFill="#880e4f" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Button fx:id="btn12" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="109.0" prefWidth="118.0" style="-fx-background-color: white;" text="7" textFill="#880e4f" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <font>
                   <Font name="System Bold" size="50.0" />
                </font>
             </Button>
-            <Button id="btn11" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="110.0" prefWidth="126.0" style="-fx-background-color: white;" text="5" textFill="#880e4f" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Button fx:id="btn11" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="110.0" prefWidth="126.0" style="-fx-background-color: white;" text="5" textFill="#880e4f" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font name="System Bold" size="50.0" />
                </font>
             </Button>
-            <Button id="btn10" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="110.0" prefWidth="126.0" style="-fx-background-color: white;" text="8" textFill="#880e4f" GridPane.rowIndex="1">
+            <Button fx:id="btn10" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="110.0" prefWidth="126.0" style="-fx-background-color: white;" text="8" textFill="#880e4f" GridPane.columnIndex="0" GridPane.rowIndex="1">
                <font>
                   <Font name="System Bold" size="50.0" />
                </font>
             </Button>
-            <Button id="btn02" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="110.0" prefWidth="126.0" style="-fx-background-color: white; -fx-background-radius: 5px;" text="4" textFill="#880e4f" GridPane.columnIndex="2">
+            <Button fx:id="btn02" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="110.0" prefWidth="126.0" style="-fx-background-color: white; -fx-background-radius: 5px;" text="4" textFill="#880e4f" GridPane.rowIndex="0" GridPane.columnIndex="2">
                <font>
                   <Font name="System Bold" size="50.0" />
                </font>
             </Button>
-            <Button id="btn01" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="110.0" prefWidth="126.0" style="-fx-background-color: white; -fx-background-radius: 5px;" text="2" textFill="#880e4f" GridPane.columnIndex="1">
+            <Button fx:id="btn01" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="110.0" prefWidth="126.0" style="-fx-background-color: white; -fx-background-radius: 5px;" text="2" textFill="#880e4f" GridPane.rowIndex="0" GridPane.columnIndex="1">
                <font>
                   <Font name="System Bold" size="50.0" />
                </font>
             </Button>
-            <Button id="btn22" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="88.0" style="-fx-background-color: white;" stylesheets="@application.css" text="3" textFill="#880e4f" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <Button fx:id="btn22" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="88.0" style="-fx-background-color: white;" stylesheets="@application.css" text="3" textFill="#880e4f" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <font>
                   <Font name="System Bold" size="50.0" />
                </font>
             </Button>
-            <Button id="btn20" mnemonicParsing="false" opacity="0.0" prefHeight="82.0" prefWidth="84.0" GridPane.rowIndex="2" />
+            <Button fx:id="btn20" mnemonicParsing="false" visible="false" prefHeight="82.0" prefWidth="84.0" GridPane.rowIndex="2" GridPane.columnIndex="0" />
          </children>
       </GridPane>
       <Button id="ReStart" layoutX="35.0" layoutY="480.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="114.0" styleClass="ReStart" stylesheets="@application.css" text="Rearrange" />
