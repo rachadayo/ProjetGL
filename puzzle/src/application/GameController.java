@@ -40,7 +40,7 @@ public class GameController {
 
     private static final List<String> PUZZLE_CONFIGS = Arrays.asList(
             "073214568", "124857063 ", "204153876", 
-            " 624801753", "280163547", "781635240"
+             "280163547", "781635240"
         );
     @FXML
     private void handleHomeButton(ActionEvent event) throws IOException {
