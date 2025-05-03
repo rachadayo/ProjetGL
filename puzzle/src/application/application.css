@@ -22,3 +22,24 @@ AnchorPane {
 .Home{
 	-fx-font-size:17px;
 }
+button20, #button20:hover, #button20:active {
+    -fx-background-color: transparent !important; 
+    }
+.info-Label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #880E4F;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 2, 0.5, 0, 1);}
+    .control-button {
+    -fx-background-color: #FFB6C1;
+    -fx-text-fill: #880E4F;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-padding: 8px;
+}
+
+.control-button:hover {
+    -fx-background-color: #FF8C9E;
+    -fx-cursor: hand;
+}

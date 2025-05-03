@@ -10,7 +10,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="600" stylesheets="@application.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.StartController">
    <children>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="154.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fitHeight="574.0" fitWidth="565.0" layoutX="-5.0" layoutY="-4.0" pickOnBounds="true">
+      <ImageView fitHeight="574.0" fitWidth="610.0" layoutX="-5.0" layoutY="-4.0" pickOnBounds="true">
          <image>
             <Image url="@backround.jpg" />
          </image>
