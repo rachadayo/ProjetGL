@@ -6,7 +6,7 @@ AnchorPane {
 .button {
     -fx-background-color: #FFB6C1;
     -fx-text-fill: #880E4F; 
-    -fx-font-size: 25px;
+    -fx-font-size: 20px;
     -fx-font-weight: bold;
     -fx-background-radius: 5px;
 }

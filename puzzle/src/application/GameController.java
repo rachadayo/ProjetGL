@@ -39,8 +39,8 @@ public class GameController {
     private int movesLeft; // Mouvements restants
 
     private static final List<String> PUZZLE_CONFIGS = Arrays.asList(
-            "123456078", "124035768", "132456708", 
-            "01345678", "120345678", "123456780"
+            "073214568", "124857063 ", "204153876", 
+            " 624801753", "280163547", "781635240"
         );
     @FXML
     private void handleHomeButton(ActionEvent event) throws IOException {
@@ -181,8 +181,8 @@ public class GameController {
                btn12.getText().equals("6") &&
                btn20.getText().equals("7") &&
                btn21.getText().equals("8") &&
-               btn22.getText().isEmpty(); // Case vide en bas à droite
-    }
+               btn22.getText().isEmpty(); 
+        }
     private void showWinAlert() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Félicitations !");
