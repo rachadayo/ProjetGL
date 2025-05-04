@@ -19,7 +19,7 @@ AnchorPane {
 .ReStart{
 	-fx-font-size:17px;
 }
-.Home{
+.Home,Shuffle{
 	-fx-font-size:17px;
 }
 button20, #button20:hover, #button20:active {
@@ -43,3 +43,8 @@ button20, #button20:hover, #button20:active {
     -fx-background-color: #FF8C9E;
     -fx-cursor: hand;
 }
+#btn20 {
+    -fx-background-color: white !important;
+    -fx-border-color: transparent !important;
+}
+

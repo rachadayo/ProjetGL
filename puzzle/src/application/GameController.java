@@ -35,8 +35,8 @@ public class GameController {
     private int movesCount = 0;
     private int score = 0;
     private int bestScore = 0;
-    private final int maxMoves = 90; // Nombre maximum de mouvements
-    private int movesLeft; // Mouvements restants
+    private final int maxMoves = 90; 
+    private int movesLeft; 
 
     private static final List<String> PUZZLE_CONFIGS = Arrays.asList(
             "073214568", "124857063 ", "204153876", 
@@ -52,7 +52,6 @@ public class GameController {
 
     @FXML
     public void initialize() {
-        // Vérification des boutons
         if (btn00 == null || btn01 == null || btn02 == null || 
             btn10 == null || btn11 == null || btn12 == null ||
             btn20 == null || btn21 == null || btn22 == null) {
@@ -61,7 +60,6 @@ public class GameController {
             return;
         }
 
-        // Configuration des actions des boutons
         btn00.setOnAction(e -> handleTileClick(0, 0));
         btn01.setOnAction(e -> handleTileClick(0, 1));
         btn02.setOnAction(e -> handleTileClick(0, 2));
@@ -72,7 +70,6 @@ public class GameController {
         btn21.setOnAction(e -> handleTileClick(2, 1));
         btn22.setOnAction(e -> handleTileClick(2, 2));
 
-        // Initialisation des compteurs
         movesCount = 0;
         score = 0;
         movesLeft = maxMoves;
@@ -80,7 +77,6 @@ public class GameController {
         updateScore();
         updateMovesLeft();
         
-        // Masquer la case vide
         btn20.setVisible(false);
     }
 
@@ -108,16 +104,13 @@ public class GameController {
         Button clicked = getButtonAt(row, col);
         Button empty = getButtonAt(emptyRow, emptyCol);
         
-        // Échange le texte
         String temp = clicked.getText();
         clicked.setText(empty.getText());
         empty.setText(temp);
         
-        // Échange la visibilité
         clicked.setVisible(false);
         empty.setVisible(true);
         
-        // Met à jour la position vide
         emptyRow = row;
         emptyCol = col;
     }
@@ -151,13 +144,13 @@ public class GameController {
         score += 10;
         if (score > bestScore) {
             bestScore = score;
-            bestScoreLabel.setText("Best: " + bestScore);
+            bestScoreLabel.setText("Best score : " + bestScore);
         }
-        scoreLabel.setText("Score: " + score);
+        scoreLabel.setText("Score : " + score);
     }
 
     private void updateMovesLeft() {
-        movesLeftLabel.setText("Moves left: " + movesLeft);
+        movesLeftLabel.setText("Moves left : " + movesLeft);
         
         if (movesLeft <= 5) {
             movesLeftLabel.setStyle("-fx-text-fill: #FF0000; -fx-font-weight: bold;");
@@ -196,7 +189,7 @@ public class GameController {
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.setTitle("Game Over");
         alert.setHeaderText("Vous avez dépassé le nombre de mouvements autorisés !");
-        alert.setContentText("Score final: " + score);
+        alert.setContentText("Final score: " + score);
         alert.showAndWait();
        
     }

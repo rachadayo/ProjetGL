@@ -49,43 +49,49 @@
                   <Font name="System Bold" size="50.0" />
                </font>
             </Button>
-            <Button fx:id="btn02" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="110.0" prefWidth="126.0" style="-fx-background-color: white; -fx-background-radius: 5px;" text="4" textFill="#880e4f" GridPane.rowIndex="0" GridPane.columnIndex="2">
+            <Button fx:id="btn02" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="110.0" prefWidth="126.0" style="-fx-background-color: white; -fx-background-radius: 5px;" text="4" textFill="#880e4f" GridPane.columnIndex="2" GridPane.rowIndex="0">
                <font>
                   <Font name="System Bold" size="50.0" />
                </font>
             </Button>
-            <Button fx:id="btn01" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="110.0" prefWidth="126.0" style="-fx-background-color: white; -fx-background-radius: 5px;" text="2" textFill="#880e4f" GridPane.rowIndex="0" GridPane.columnIndex="1">
+            <Button fx:id="btn01" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="110.0" prefWidth="126.0" style="-fx-background-color: white; -fx-background-radius: 5px;" text="2" textFill="#880e4f" GridPane.columnIndex="1" GridPane.rowIndex="0">
                <font>
                   <Font name="System Bold" size="50.0" />
                </font>
             </Button>
-            <Button fx:id="btn22" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="88.0" style="-fx-background-color: white;" stylesheets="@application.css" text="3" textFill="#880e4f" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <Button fx:id="btn22" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="110.0" prefWidth="126.0" style="-fx-background-color: white;" stylesheets="@application.css" text="3" textFill="#880e4f" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <font>
                   <Font name="System Bold" size="50.0" />
                </font>
             </Button>
-            <Button fx:id="btn20" mnemonicParsing="false" visible="false" prefHeight="82.0" prefWidth="84.0" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+            <Button fx:id="btn20"  mnemonicParsing="false" prefHeight="110.0" prefWidth="126.0" visible="false" GridPane.columnIndex="0" GridPane.rowIndex="2" />
 
          </children>
       </GridPane>
-      <Button id="Shuffle" layoutX="35.0" layoutY="480.0" mnemonicParsing="false" onAction="#shufflePuzzle" prefHeight="31.0" prefWidth="114.0" styleClass="Shuffle" stylesheets="@application.css" text="Shuffle" />
-      <Button id="Home" layoutX="420.0" layoutY="480.0" mnemonicParsing="false" onAction="#handleHomeButton" prefHeight="38.0" prefWidth="120.0" styleClass="Home" stylesheets="@application.css" text="Home" />
-      <Label layoutX="10.0" layoutY="14.0" prefHeight="46.0" prefWidth="200.0" text="number of moves" />
+      <Button id="Shuffle" layoutX="38.0" layoutY="477.0" mnemonicParsing="false" onAction="#shufflePuzzle" prefHeight="38.0" prefWidth="120.0" styleClass="Shuffle" stylesheets="@application.css" text="Shuffle" />
+      <Button id="Home" layoutX="420.0" layoutY="477.0" mnemonicParsing="false" onAction="#handleHomeButton" prefHeight="43.0" prefWidth="120.0" styleClass="Home" stylesheets="@application.css" text="Home" />
     
+   <Label fx:id="scoreLabel" layoutX="10.0" layoutY="14.0" prefHeight="46" prefWidth="200" text="Score : 0" textFill="#880e4f">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+<Label fx:id="bestScoreLabel" layoutX="10.0" layoutY="45.0" prefHeight="46" prefWidth="200" text="Best score : 0" textFill="#880e4f">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+
+<Label fx:id="movesLeftLabel" layoutX="10.0" layoutY="78.0" prefHeight="46" prefWidth="200" styleClass="info-label" text="Moves left : 30" textFill="#880e4f">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+
+
    </children>
    <styleClass>
-      <String fx:value="grid-border" />
       <String fx:value="grid-border" />
    </styleClass>
    <padding>
       <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
    </padding>
 
-   <Label fx:id="scoreLabel" layoutX="10" layoutY="40" prefHeight="46" prefWidth="200" text="Score: 0"/>
-<Label fx:id="bestScoreLabel" layoutX="10" layoutY="66" prefHeight="46" prefWidth="200" text="Best: 0"/>
-
-<Label fx:id="movesLeftLabel" layoutX="10" layoutY="120" prefHeight="46" prefWidth="200" text="Moves left: 30" styleClass="info-label"/>
-
-
 </AnchorPane>
-
