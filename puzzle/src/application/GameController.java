@@ -1,6 +1,8 @@
 package application;
 
 import javafx.event.ActionEvent;
+
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -17,8 +19,24 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 import javafx.animation.*;
+
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+import javafx.util.Duration;
+
+
+
+
 
 public class GameController {
 
@@ -29,18 +47,29 @@ public class GameController {
     @FXML private Label scoreLabel;
     @FXML private Label bestScoreLabel;
     @FXML private Label movesLeftLabel;
-
+    @FXML private Label timerLabel;
+    
     private int emptyRow = 2;
     private int emptyCol = 0;
     private int movesCount = 0;
     private int score = 0;
-    private int bestScore = 0;
+    private int bestScore ;
     private final int maxMoves = 90; 
     private int movesLeft; 
+    
+   
+    private int seconds=0;
+    private int minutes=0;
+    private int hours=0;
+    private Timeline timeline;
+    
+    String seconds_string = String.format("%02d", seconds);
+    String minutes_string = String.format("%02d", minutes);
+    String hours_string = String.format("%02d", hours);
 
     private static final List<String> PUZZLE_CONFIGS = Arrays.asList(
             "073214568", "124857063 ", "204153876", 
-             "280163547", "781635240"
+             "280163547", "781635240", "120453786"
         );
     @FXML
     private void handleHomeButton(ActionEvent event) throws IOException {
@@ -50,6 +79,7 @@ public class GameController {
         stage.show();
     }
 
+    // Initialization Of the game
     @FXML
     public void initialize() {
         if (btn00 == null || btn01 == null || btn02 == null || 
@@ -59,6 +89,8 @@ public class GameController {
             getButtonAt(emptyRow, emptyCol).setVisible(false);
             return;
         }
+        
+      
 
         btn00.setOnAction(e -> handleTileClick(0, 0));
         btn01.setOnAction(e -> handleTileClick(0, 1));
@@ -78,15 +110,34 @@ public class GameController {
         updateMovesLeft();
         
         btn20.setVisible(false);
+        
+        //TIMER 
+        timeline = new Timeline(new KeyFrame(Duration.seconds(1), event -> {
+            seconds++;
+            if (seconds == 60) {
+                seconds = 0;
+                minutes++;
+            }
+            if (minutes == 60) {
+                minutes = 0;
+                hours++;
+            }
+
+            String timeString = String.format("%02d:%02d:%02d", hours, minutes, seconds);
+            timerLabel.setText(timeString);
+        }));
+        timeline.setCycleCount(Timeline.INDEFINITE);
+        timeline.play();
     }
 
-  
+    // Moving the tile
     private void handleTileClick(int row, int col) {
         System.out.println("Clicked: " + row + "," + col);
         if (isAdjacent(row, col)) {
             swapTiles(row, col);
             movesCount++;
             movesLeft--;
+            score += 10;
         
             updateScore();
             updateMovesLeft();
@@ -141,14 +192,16 @@ public class GameController {
 
   
     private void updateScore() {
-        score += 10;
-        if (score > bestScore) {
-            bestScore = score;
-            bestScoreLabel.setText("Best score : " + bestScore);
-        }
-        scoreLabel.setText("Score : " + score);
+    	scoreLabel.setText("Score : " + score);
+    	if(isSolved()) {
+    		if (score > bestScore) {
+                bestScore = score;
+                bestScoreLabel.setText("Best score : " + bestScore);
+            }
+    	} 
     }
-
+  
+   
     private void updateMovesLeft() {
         movesLeftLabel.setText("Moves left : " + movesLeft);
         
@@ -191,9 +244,9 @@ public class GameController {
         alert.setHeaderText("Vous avez dépassé le nombre de mouvements autorisés !");
         alert.setContentText("Final score: " + score);
         alert.showAndWait();
-       
     }
 
+    // Configirations to play with
     @FXML
     private void shufflePuzzle() {
         Collections.shuffle(PUZZLE_CONFIGS);
@@ -206,8 +259,11 @@ public class GameController {
         
     }
 
-    private void loadPuzzleConfig(String config) {
-        int index = 0;
+    
+    // rearrange the puzzle
+   
+    private void rearrangePuzzle(String config) {
+    	int index = 0;
         for (int row = 0; row < 3; row++) {
             for (int col = 0; col < 3; col++) {
                 Button btn = getButtonAt(row, col);
@@ -221,8 +277,57 @@ public class GameController {
                     btn.setText(String.valueOf(c));
                     btn.setVisible(true);
                 }
-  
             }
         }
     }
+     // set the action
+    @FXML
+    private void rearrange(ActionEvent event) {
+    	String config = PUZZLE_CONFIGS.get(0);
+    	loadPuzzleConfig(config);
+    }
+    
+    
+    // load the config
+    private void loadPuzzleConfig(String config) {
+      switch (config) {
+      case "124857063":
+    	  System.out.println("rearranging the puzzle... ");
+    	  rearrangePuzzle("124857063");
+    	  break;
+      
+      case "073214568":
+  	  System.out.println("rearranging the puzzle... ");
+  	  rearrangePuzzle("073214568");
+  	  break;
+  	  
+      case "204153876":
+      	  System.out.println("rearranging the puzzle... ");
+      	  rearrangePuzzle("204153876");
+      	  break;
+      	  
+      case "280163547":
+      	  System.out.println("rearranging the puzzle... ");
+      	  rearrangePuzzle("280163547");
+      	  break;
+      	  
+      case "781635240":
+      	  System.out.println("rearranging the puzzle... ");
+      	  rearrangePuzzle("781635240");
+      	  break;
+      	  
+      case "120453786":
+      	  System.out.println("rearranging the puzzle... ");
+      	  rearrangePuzzle("120453786");
+      	  break;
+    }
+      
+    	  
+    }
+
+    
+ 
+
+    
+    
 }
