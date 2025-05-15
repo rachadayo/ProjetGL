@@ -47,5 +47,10 @@ button20, #button20:hover, #button20:active {
     -fx-background-color: white !important;
     -fx-border-color: transparent !important;
 }
-
+.start-border{
+	-fx-border-color:  #FFDFDF !important;
+    -fx-border-width: 5px !important;
+    -fx-background-color:#FFDFDF !important;
+	
+}
 

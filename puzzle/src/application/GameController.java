@@ -249,6 +249,7 @@ public class GameController {
     // Configirations to play with
     @FXML
     private void shufflePuzzle() {
+    	System.out.println("shuflle..");
         Collections.shuffle(PUZZLE_CONFIGS);
         loadPuzzleConfig(PUZZLE_CONFIGS.get(0));
         movesCount = 0;
@@ -262,7 +263,7 @@ public class GameController {
     
     // rearrange the puzzle
    
-    private void rearrangePuzzle(String config) {
+    private void loadPuzzleConfig(String config) {
     	int index = 0;
         for (int row = 0; row < 3; row++) {
             for (int col = 0; col < 3; col++) {
@@ -280,51 +281,31 @@ public class GameController {
             }
         }
     }
-     // set the action
-    @FXML
-    private void rearrange(ActionEvent event) {
-    	String config = PUZZLE_CONFIGS.get(0);
-    	loadPuzzleConfig(config);
-    }
-    
     
     // load the config
-    private void loadPuzzleConfig(String config) {
+    private void rearrangingConfig(String config) {
       switch (config) {
+      
       case "124857063":
-    	  System.out.println("rearranging the puzzle... ");
-    	  rearrangePuzzle("124857063");
-    	  break;
-      
       case "073214568":
-  	  System.out.println("rearranging the puzzle... ");
-  	  rearrangePuzzle("073214568");
-  	  break;
-  	  
       case "204153876":
-      	  System.out.println("rearranging the puzzle... ");
-      	  rearrangePuzzle("204153876");
-      	  break;
-      	  
       case "280163547":
-      	  System.out.println("rearranging the puzzle... ");
-      	  rearrangePuzzle("280163547");
-      	  break;
-      	  
       case "781635240":
-      	  System.out.println("rearranging the puzzle... ");
-      	  rearrangePuzzle("781635240");
-      	  break;
-      	  
       case "120453786":
-      	  System.out.println("rearranging the puzzle... ");
-      	  rearrangePuzzle("120453786");
-      	  break;
-    }
-      
-    	  
-    }
-
+        	   
+    	  System.out.println("rearranging the puzzle... ");
+           loadPuzzleConfig("124857063");
+    	  break; 
+          }
+     }
+     
+    // set the action
+   @FXML
+   private void rearrange(ActionEvent event) {
+   	String config = "124857063";
+   	rearrangingConfig(config);
+   }
+   
     
  
 

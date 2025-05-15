@@ -68,25 +68,25 @@
 
          </children>
       </GridPane>
-      <Button id="Shuffle" layoutX="38.0" layoutY="477.0" mnemonicParsing="false" onAction="#shufflePuzzle" prefHeight="38.0" prefWidth="120.0" styleClass="Shuffle" stylesheets="@application.css" text="Shuffle" />
+      <Button id="Shuffle" layoutX="38.0" layoutY="477.0" mnemonicParsing="false" onAction="#shufflePuzzle" prefHeight="37.0" prefWidth="120.0" styleClass="Shuffle" stylesheets="@application.css" text="Shuffle" />
       <Button id="Home" layoutX="420.0" layoutY="477.0" mnemonicParsing="false" onAction="#handleHomeButton" prefHeight="43.0" prefWidth="120.0" styleClass="Home" stylesheets="@application.css" text="Home" />
     
-   <Label fx:id="scoreLabel" layoutX="10.0" layoutY="14.0" prefHeight="46" prefWidth="200" text="Score : 0" textFill="#880e4f">
+   <Label fx:id="scoreLabel" layoutX="85.0" layoutY="95.0" prefHeight="46" prefWidth="200" text="Score : 0" textFill="#880e4f">
          <font>
-            <Font name="System Bold" size="15.0" />
+            <Font name="System Bold" size="18.0" />
          </font></Label>
-<Label fx:id="bestScoreLabel" layoutX="10.0" layoutY="45.0" prefHeight="46" prefWidth="200" text="Best score : 0" textFill="#880e4f">
+<Label fx:id="bestScoreLabel" layoutX="200.0" layoutY="26.0" prefHeight="46" prefWidth="200" text="Best score : 0" textFill="#880e4f">
          <font>
             <Font name="System Bold" size="30.0" />
          </font></Label>
 
-<Label fx:id="movesLeftLabel" layoutX="10.0" layoutY="78.0" prefHeight="46" prefWidth="200" styleClass="info-label" text="Moves left : 30" textFill="#880e4f">
+<Label fx:id="movesLeftLabel" layoutX="400.0" layoutY="95.0" prefHeight="46" prefWidth="200" styleClass="info-label" text="Moves left : 30" textFill="#880e4f">
          <font>
-            <Font name="System Bold" size="15.0" />
+            <Font name="System Bold" size="17.0" />
          </font></Label>
 
 
-    <Label fx:id="timerLabel" layoutX="406.0" layoutY="52.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="00:00:00" />
+    <Label fx:id="timerLabel" layoutX="237.0" layoutY="101.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="00:00:00" />
       <Button id="Rearrange" layoutX="223.0" layoutY="477.0" mnemonicParsing="false" onAction="#rearrange" text="Rearrange" />
 
       
