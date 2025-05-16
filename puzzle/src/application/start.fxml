@@ -8,8 +8,8 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="600" styleClass="start-border" stylesheets="@application.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.StartController">
    <children>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="154.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true" />
-      <Button id="startButton" fx:id="startButton" layoutX="209.0" layoutY="393.0" mnemonicParsing="false" onAction="#handleStartButton" prefHeight="46.0" prefWidth="165.0" stylesheets="@application.css" text="Start" />
-      <ImageView fitHeight="190.0" fitWidth="460.0" layoutX="47.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+      <Button id="startButton" fx:id="startButton" layoutX="209.0" layoutY="420.0" mnemonicParsing="false" onAction="#handleStartButton" prefHeight="46.0" prefWidth="165.0" stylesheets="@application.css" text="Start" />
+      <ImageView fitHeight="190.0" fitWidth="460.0" layoutX="62.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@puzzle%20(2).png" />
          </image>

@@ -34,10 +34,6 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
-
-
-
-
 public class GameController {
 
     @FXML private Button btn00, btn01, btn02,
@@ -192,13 +188,13 @@ public class GameController {
 
   
     private void updateScore() {
-    	scoreLabel.setText("Score : " + score);
-    	if(isSolved()) {
-    		if (score > bestScore) {
+        scoreLabel.setText("Score : " + score);
+        if(isSolved()) {
+            if (bestScore == 0 || score > bestScore) {  
                 bestScore = score;
                 bestScoreLabel.setText("Best score : " + bestScore);
             }
-    	} 
+        } 
     }
   
    
@@ -229,21 +225,39 @@ public class GameController {
                btn21.getText().equals("8") &&
                btn22.getText().isEmpty(); 
         }
+    private void resetTimer() {
+        seconds = 0;
+        minutes = 0;
+        hours = 0;
+        timerLabel.setText("00:00:00");
+    }
     private void showWinAlert() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Félicitations !");
         alert.setHeaderText("Puzzle résolu !");
         alert.setContentText("Score: " + score + "\nMouvements: " + movesCount);
         alert.showAndWait();
-       
+        movesCount = 0;
+        score = 0;
+        movesLeft = maxMoves;
+        updateScore();
+        updateMovesLeft();
+        loadPuzzleConfig("124857063");
+        resetTimer();
     }
-
     private void showGameOverAlert() {
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.setTitle("Game Over");
         alert.setHeaderText("Vous avez dépassé le nombre de mouvements autorisés !");
         alert.setContentText("Final score: " + score);
         alert.showAndWait();
+        movesCount = 0;
+        score = 0;
+        movesLeft = maxMoves;
+        updateScore();
+        updateMovesLeft();
+        loadPuzzleConfig("124857063");
+        resetTimer();
     }
 
     // Configirations to play with
@@ -257,7 +271,6 @@ public class GameController {
         movesLeft = maxMoves;
         updateScore();
         updateMovesLeft();
-        
     }
 
     
@@ -304,6 +317,13 @@ public class GameController {
    private void rearrange(ActionEvent event) {
    	String config = "124857063";
    	rearrangingConfig(config);
+   	movesCount = 0;
+    score = 0;
+    movesLeft = maxMoves;
+    updateScore();
+    updateMovesLeft();
+    resetTimer();
+
    }
    
     
