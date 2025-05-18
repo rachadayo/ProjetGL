@@ -189,7 +189,7 @@ public class GameController {
   
     private void updateScore() {
         scoreLabel.setText("Score : " + score);
-        if(isSolved()) {  
+        if(isSolved()) {
             if (bestScore == 0 || score > bestScore) {  
                 bestScore = score;
                 bestScoreLabel.setText("Best score : " + bestScore);
@@ -232,10 +232,6 @@ public class GameController {
         timerLabel.setText("00:00:00");
     }
     private void showWinAlert() {
-    	  if (score > bestScore) {
-    	        bestScore = score;
-    	        bestScoreLabel.setText("Best score : " + bestScore); 
-    	    }
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Félicitations !");
         alert.setHeaderText("Puzzle résolu !");
